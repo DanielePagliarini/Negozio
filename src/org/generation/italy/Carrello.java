@@ -11,7 +11,7 @@ float totale;
 
 public void aggiungiProdottoAlCarrello(Integer sceltaProdotto) {
 	
-	carrello.put(carrello.size()+1, elencoProdotti.get(sceltaProdotto)   );
+	carrello.put(carrello.size()+1, sceltaProdotto  );
 }
 
 

@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Negozio {
 	private HashMap<Integer,Prodotto> elencoProdotti=new HashMap<>();
+	
 
 
 	public Negozio() {
