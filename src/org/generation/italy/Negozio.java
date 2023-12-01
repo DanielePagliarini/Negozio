@@ -5,8 +5,23 @@ import java.util.Scanner;
 
 public class Negozio {
 	private HashMap<Integer,Prodotto> elencoProdotti=new HashMap<>();
+	HashMap<Integer,Prodotto> carrello =new HashMap<>();
+	
+	
 	
 
+	public void aggiungiAlCarrello(Integer prodottoDaAggiungere) {
+		
+		carrello.put(carrello.size()+1, elencoProdotti.get(prodottoDaAggiungere));
+
+	}
+	
+	public void elencaCarrello() {
+		for(Integer n:carrello.keySet())
+		{
+			System.out.println(carrello.get(n).getDescrizione()+" " +carrello.get(n).getPrezzo()+ "€" + "  sconto " + carrello.get(n).getSconto()+ "%" );
+		}
+		}
 
 	public Negozio() {
 		elencoProdotti.put(1, new Prodotto("JEANS ANNA PEPE","JE001",30.0f));

@@ -23,7 +23,7 @@ public class Main {
 			System.out.println("\n1 - visualizza prodotti");
 			System.out.println("2 - aggiungi prodotto");
 			System.out.println("3 - applica sconto");
-			System.out.println("4 - compra");
+			System.out.println("4 - aggiungi al carrello");
 			System.out.println("5 - esci");
 			
 			System.out.println("\n **** scegli le opzioni da 1 a 5 ****");
@@ -61,10 +61,19 @@ public class Main {
 			    	System.out.println("prodotto non disponibile");
 			    }
 				
-				
-			
+			    	
 			}
-	
+			else if (risposta.equals("4"))
+			{ 
+			    System.out.println("Quale prodotto vuoi aggiungere al carrello? (indice)");
+			    negozio.elencaProdotti();
+			    sceltaProdotto=Integer.parseInt(sc.nextLine());
+			    negozio.aggiungiAlCarrello(sceltaProdotto);
+			    System.out.println("il tuo carrello è composto da: ");
+			    negozio.elencaCarrello();
+			  
+			   
+			}
       
 		
 		
